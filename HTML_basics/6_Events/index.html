@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изучение frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="События">
+        <title>События</title>
+    </head>
+    <body onload="printLoadString()">
+        <h1>События</h1>
+        <!-- Вывод некоторой информации -->
+        <label for="output">Вывод:</label>
+        <p id="output"></p>
+        <!-- Счетчик нажатий в keyup -->
+        <label for="counter">Счетчик:</label>
+        <p id="counter">0</p>
+        <hr>
+        <label for="keyup">Обработка события кнопок</label>
+        <!-- События onkeyup и onkeydown -->
+        <input type="text" id="keyup" onkeydown="printKeydownString()" onkeyup="printKeyupString()">
+        <hr>
+        <label for="blur">Обработка событя покиданя поля</label>
+        <!-- Событие onblur -->
+        <input type="text" id="blur" onblur="printBlurString()">
+        <hr>
+        <label for="change">Обработка события изменения</label>
+        <!-- Событие onchange -->
+        <select name="menu" id="change" onchange="printChangeString()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <hr>
+        <label for="focus">Обработка события фокуса</label>
+        <!-- Событие onfocus -->
+        <input type="text" id="focus" onfocus="printFocusString()" value="Значение">
+        <hr>
+        <label for="submit">Обработка подтверждения</label>
+        <!-- Событие onsubmit -->
+        <form action="" id="submit" onsubmit="printSubmitString()">
+            Введите строку: <input type="text" id="input">
+            <input type="submit" value="Принять">
+        </form>
+        <hr>
+        <!-- Событие onmouseup и onmousedown -->
+        <p onmouseup="mouseUp(this)" onmousedown="mouseDown(this)"
+        style="font-size: 8px;">Текст реагирующий на клик</p>
+        <hr>
+        <!-- Событие onreset -->
+        <form action="" onreset="printResetString()">
+            Введите строку: <input type="text" id="reset">
+            <input type="reset" value="Сбросить">
+        </form>
+        <hr>
+        <!-- События onmouseout и onmouseover -->
+        <p onmouseout="mouseOut(this)" onmouseover="mouseOver(this)"
+        style="font-size: 8px;">Текст реагирующий на наведение мыши</p>
+        <hr>
+        <!-- Событие ondbclick -->
+        <p ondblclick="dbClick()">Можно сделать двойной клик</p>
+
+
+        <script>
+            // Функция обработки события onkeydown
+            function printKeydownString(){
+                let out = document.getElementById("output");
+                if (out.textContent === "Загружено"){
+                    out.textContent = "";
+                }
+                let el = document.getElementById("keyup");
+                let text = el.value;
+                let last = text.length - 1;
+                let c = text[last];
+                if (typeof c == "undefined"){
+                    c = "";
+                }
+                out.textContent += c;
+            }
+
+            // Функция обработки события onkeyup
+            function printKeyupString(){
+                let count = parseInt(document.getElementById("counter").textContent);
+                count += 1;
+                document.getElementById("counter").textContent = count;
+            }
+
+            // Обработка события onblur
+            function printBlurString(){
+                let el = document.getElementById("blur");
+                printOnOutput(el.value);
+            }
+
+            // Обработка события onchange
+            function printChangeString(){
+                let el = document.getElementById("change");
+                printOnOutput(el.value);
+            }
+
+            // Обработка события onload
+            function printLoadString(){
+                printOnOutput("Загружено");
+            }
+
+            // Обработка события onfocus
+            function printFocusString(){
+                let el = document.getElementById("focus");
+                printOnOutput(el.value);
+            }
+            
+            // Обработка события onsubmit
+            function printSubmitString(){
+                let el = document.getElementById("input");
+                alert(el.value);
+            }
+
+            // Обработка события onmouseup
+            function mouseUp(el){
+                el.style.fontSize = "8px";
+            }
+
+            // Обработка события onmousedown
+            function mouseDown(el){
+                el.style.fontSize = "10px";
+            }
+
+            // Обработка события onreset
+            function printResetString(){
+                let el = document.getElementById("reset");
+                alert(el.value);
+            }
+
+            // Обработка события onmouseover
+            function mouseOver(el){
+                el.style.fontSize = "10px";
+            }
+
+            // Обработка события onmouseover
+            function mouseOut(el){
+                el.style.fontSize = "8px";
+            }
+
+            // Обработка события ondbclick
+            function dbClick(){
+                alert("Двойной клик");
+            }
+
+            // Вывод
+            function printOnOutput(text){
+                let el = document.getElementById("output");
+                el.textContent = text;
+            }
+        </script>
+    </body>
+</html>
