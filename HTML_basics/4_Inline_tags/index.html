@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">  
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изучение frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="Строчные теги">
+        <title>Строчные теги</title>
+    </head>
+    <body>
+        <h1>Строчные теги</h1>
+        <h2>Текст с переносом строки</h2>
+        <!-- Использование br -->
+        <div>
+            Текст до переноса строки,<br>а стразу за ним после переноса
+        </div>
+        <hr>
+        <h2>Прогресбар</h2>
+        <!-- Прогресбар показывающий 25 из 100% -->
+        <progress max="100" value="25">25%</progress>
+        <hr>
+        <h2>Использование тега canvas для отрисовки флага России</h2>
+        <!-- Размещение canvas -->
+        <canvas id="flagCanvas" width="200" height="150" style="border:1px solid #d3d3d3;">
+            Видимо ваш браузер не поддерживает тег canvas
+        </canvas>
+        <!-- Скрипт рендера флага -->
+        <script>
+            let canvas = document.getElementById("flagCanvas");
+            let context = canvas.getContext("2d");
+            context.moveTo(0, 0);
+            context.fillStyle = "#FFFFFF";
+            context.fillRect(0, 0, 200, 50);
+            context.fillStyle = "#0039A6";
+            context.fillRect(0, 50, 200, 50);
+            context.fillStyle = "#D52B1E";
+            context.fillRect(0, 100, 200, 50);
+            context.stroke();
+        </script>
+        <hr>
+        <h2>Видео</h2>
+        <figure>
+            <!-- Вставка видео на страницу, с элементами управления -->
+            <video src="video.mp4" controls width="720" height="320">
+                Не удалось отобразитель видео файл.
+            </video>
+            <figcaption>
+                Ссылка на источник:
+                <cite>
+                    <!-- Использование гиперссылок -->
+                    <a href="https://www.videvo.net/video/waterside-jetty-in-stormy-weather/457452/">
+                    источник
+                    </a>
+                </cite>
+            </figcaption>
+        </figure>
+        <hr>
+        <h2>Аудио</h2>
+        <figure>
+            <audio src="sound.wav" controls>Не удалось отобразить аудио</audio>
+            <figcaption>
+                Ссылка на источник:
+                <cite>
+                    <a href="https://mixkit.co/free-sound-effects/">
+                        источник
+                    </a>
+                </cite>
+            </figcaption>
+        </figure>
+        <hr>
+        <h2>Изображение</h2>
+        <figure>
+            <!-- Вставка изображения -->
+            <img src="image.jpg" alt="Две цапли" width="450">
+            <figcaption>
+                Две цапли<br>
+                Ссылка на источник:
+                <cite>
+                    <a href="https://unsplash.com/photos/j0MxjW-TV2c">
+                        источник
+                    </a>
+                </cite>
+            </figcaption>
+        </figure>
+        <h2>Ссылка на другой документ</h2>
+        <div>
+            <a href="table/table.html">Документ с таблицами</a>
+        </div>
+    </body>
+</html>
