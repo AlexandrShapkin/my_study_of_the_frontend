@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изучение frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="Формы">
+        <title>Формы</title>
+    </head>
+    <body>
+        <h1>Формы</h1>
+        <h2>Кнопка</h2>
+        <!-- Подпись к кнопке -->
+        <label for="button">Кнопка: </label>
+        <!-- Кнопка -->
+        <button id="button" name="button">Кнопка</button>
+        <hr>
+        <h2>Текстовое поле</h2>
+        <label for="textarea">Текстовое поле:</label>
+        <!-- Текстовое поле -->
+        <textarea id="textarea" name="text" id="" cols="30" rows="10">
+        </textarea>
+        <hr>
+        <h2>Поле ввода</h2>
+        <label for="">Поле ввода (1-4 символов):</label>
+        <!-- Поле ввода -->
+        <input type="text" id="name" name="name"
+        required minlength="1" maxlength="4" size="8">
+        <hr>
+        <h2>Меню выбора</h2>
+        <label for="menu">Меню выбора</label>
+        <!-- Меню выбора -->
+        <select name="menu" id="menu">
+            <option value="">-- Меню выбора --</option>
+            <option value="1">Пункт 1</option>
+            <option value="2">Пункт 2</option>
+            <option value="3">Пункт 3</option>
+        </select>
+        <hr>
+        <h2>Форма</h2>
+        <!-- Форма -->
+        <form action="" method="get" class="form">
+            <!-- Первое поле -->
+            <div class="form">
+                <label for="first">Первое поле ввода:</label>
+                <input type="text" name="first" id="first" required>
+            </div>
+            <!-- Второе поле -->
+            <div class="form">
+                <label for="second">Второе поле ввода:</label>
+                <input type="text" name="second" id="second" required>
+            </div>
+            <!-- Кнопка принять -->
+            <div class="form">
+                <input type="submit" value="Принять">
+            </div>
+        </form>
+    </body>
+</html>
