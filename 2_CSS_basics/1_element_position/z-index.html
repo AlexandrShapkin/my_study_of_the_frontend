@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <style>
+        div.wrapper{
+            height: 105px;
+            width: 160px;
+        }
+
+        div.first{
+            position: fixed;
+            border: solid 1px;
+            height: 60px;
+            width: 100px;
+            margin-top: 0px;
+            margin-left: 0px;
+            background-color: aqua;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        div.second{
+            position: fixed;
+            border: solid 1px;
+            height: 60px;
+            width: 100px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: beige;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        div.third{
+            position: fixed;
+            border: solid 1px;
+            height: 60px;
+            width: 100px;
+            margin-top: 40px;
+            margin-left: 60px;
+            background-color: burlywood;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" conent="Мое изучение frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="z-index">
+        <title>z-index</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="first" id="first">Первый</div>
+            <div class="second" id="second">Второй</div>
+            <div class="third" id="third">Третий</div>
+        </div>
+        <select name="menu" id="menu" onchange="changeZ()">
+            <option value="">-- Выбор карточек -- </option>
+            <option value="first">Первый</option>
+            <option value="second">Второй</option>
+            <option value="third">Третий</option>
+        </select>
+    </body>
+    <script>
+        function changeZ(){
+            let select = document.getElementById("menu");
+            let selected = select.value;
+            if (selected == "") return;
+            let first = document.getElementById("first");
+            let second = document.getElementById("second");
+            let third = document.getElementById("third");
+            first.style.zIndex = "1";
+            second.style.zIndex = "2";
+            third.style.zIndex = "3";
+            let current = document.getElementById(selected);
+            current.style.zIndex = "4";
+        }
+    </script>
+</html>

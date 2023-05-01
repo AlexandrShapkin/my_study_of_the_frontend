@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <style>
+        div.rect{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border: solid 2px;
+            transition: 2s;
+        }
+
+        #leftRect{
+            background-color: antiquewhite;
+            top: 0px;
+            left: 0px;
+        }
+
+        #rightRect{
+            background-color: aquamarine;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        div.container{
+            position: relative;
+            height: 500px;
+            width: 500px;
+            border: dashed 1px;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изучение frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="Типы top и bottom">
+        <title>Типы top и bottom</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="rect" id="leftRect"></div>
+            <div class="rect" id="rightRect"></div>
+        </div>
+        <button onclick="move()">Движение</button>
+        <footer>
+            <a href="index.html">Назад</a>
+        </footer>
+    </body>
+    <script>
+        i = 0;
+        function move(){
+            let leftRectangle = document.getElementById("leftRect");
+            let rightRectangle = document.getElementById("rightRect");
+            if (i != 450) {
+                for (; i < 450; i++) {
+                    leftRectangle.style.top = i + "px";
+                    leftRectangle.style.left = i + "px";
+                    rightRectangle.style.bottom = i + "px";
+                    rightRectangle.style.right = i + "px";
+                }
+            } else {
+                for (; i >= 0; i--){
+                    leftRectangle.style.top = i + "px";
+                    leftRectangle.style.left = i + "px";
+                    rightRectangle.style.bottom = i + "px";
+                    rightRectangle.style.right = i + "px";
+                }
+            }
+        }
+    </script>
+</html>

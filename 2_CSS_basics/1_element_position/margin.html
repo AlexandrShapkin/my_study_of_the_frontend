@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <style>
+        div.container{
+            height: 180px;
+            max-width: 250px;
+        }
+        div.top{
+            border: solid 2px;
+            height: 40px;
+        }
+        div.bottom{
+            border: solid 2px;
+            height: 40px;
+        }
+        div.changeble{
+            border: solid 2px;
+            height: 40px;
+            margin: 5% 0;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изучение frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="CSS margin">
+        <title>CSS margin</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top"></div>
+            <div class="changeble" id="changeble"></div>
+            <div class="bottom"></div>
+        </div>
+        <div>
+            <select name="menu" id="menu" onchange="changeMargin()">
+                <option value="1em">1em</option>
+                <option value="5% 0">5% 0</option>
+                <option value="10px 50px 20px">10px 50px 20px</option>
+                <option value="10px 50px 20px 0">10px 50px 20px 0</option>
+                <option value="0">0</option>
+                <option value="auto">auto</option>
+            </select>
+        </div>
+        <footer>
+            <a href="index.html">Назад</a>
+        </footer>
+    </body>
+    <script>
+        function changeMargin(){
+            let select = document.getElementById("menu");
+            let changeble = document.getElementById("changeble");
+            changeble.style.margin = select.value;
+        }
+    </script>
+</html>
