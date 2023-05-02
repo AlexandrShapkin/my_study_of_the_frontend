@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        div.container{
+            width: 250px;
+            height: 250px;
+            padding: 10px;
+        }
+
+        p.paragraph{
+            margin: auto;
+            border: solid 1px;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изученеи frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="Рамки">
+        <title>Рамки</title>
+    </head>
+    <body>
+        <h1>Рамки</h1>
+        <div class="container">
+            <p class="paragraph" id="paragraph">
+                Текст
+            </p>
+        </div>
+        <div>
+            <select name="menu" id="type" onchange="changeBorder()">
+                <option value="solid">solid</option>
+                <option value="dashed">dashed</option>
+            </select>
+            <select name="menu" id="width" onchange="changeBorder()">
+                <option value="0px">0px</option>
+                <option value="1px">1px</option>
+                <option value="2px">2px</option>
+                <option value="3px">3px</option>
+            </select>
+            <select name="menu" id="color" onchange="changeBorder()">
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="beige">beige</option>
+                <option value="blue">blue</option>
+            </select>
+        </div>
+        <footer>
+            <a href="index.html">Назад</a>
+        </footer>
+    </body>
+    <script>
+        function changeBorder(){
+            let type = document.getElementById("type").value;
+            let width = document.getElementById("width").value;
+            let color = document.getElementById("color").value;
+
+            let paragraph = document.getElementById("paragraph");
+
+            paragraph.style.borderStyle = type;
+            paragraph.style.borderWidth = width;
+            paragraph.style.borderColor = color;
+        }
+    </script>
+</html>

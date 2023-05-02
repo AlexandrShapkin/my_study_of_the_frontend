@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <style>
+        div{
+            width: 150px;
+            height: 70px;
+        }
+        table, td{
+            border: solid 1px;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изучение frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="Отображение">
+        <title>Отображение</title>
+    </head>
+    <body>
+        <h1>Отображение</h1>
+        <div>
+            <table>
+                <tr>
+                    <td>Текст</td>
+                    <td>Текст</td>
+                </tr>
+                <tr id="row">
+                    <td>Текст</td>
+                    <td>Текст</td>
+                </tr>
+            </table>
+        </div>
+        <select name="menu" id="visibility" onchange="visibilityChange()">
+            <option value="visible">visible</option>
+            <option value="hidden">hidden</option>
+            <option value="collapse">collapse</option>
+        </select>
+        <footer>
+            <a href="index.html">Назад</a>
+        </footer>
+    </body>
+    <script>
+        function visibilityChange(){
+            let row = document.getElementById("row");
+            let visibility = document.getElementById("visibility").value;
+            row.style.visibility = visibility;
+        }
+    </script>
+</html>
