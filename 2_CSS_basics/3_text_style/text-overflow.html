@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <style>
+        div{
+            width: 185px;
+        }
+
+        p{
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #first{
+            text-overflow: clip;
+        }
+
+        #second{
+            text-overflow: ellipsis;
+        }
+
+        #third{
+            text-overflow: ":)";
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изучение frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="Переполнение текста">
+        <title>Переполнение текста</title>
+    </head>
+    <body>
+        <h1>Переполнение текста</h1>
+        <div>
+            <p id="first">Слишком длинный текст</p>
+            <p id="second">Слишком длинный текст</p>
+            <p id="third">Слишком длинный текст</p>
+        </div>
+        <footer>
+            <a href="index.html">Назад</a>
+        </footer>
+    </body>
+</html>

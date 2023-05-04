@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <style>
+        div{
+            width: 150px;
+        }
+
+        #text{
+            text-align: center;
+            border: solid 1px;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="application name" content="Мое изученеи frontend">
+        <meta name="author" content="Александр Шапкин">
+        <meta name="description" content="Пространство между строками">
+        <title>Пространство между строками</title>
+    </head>
+    <body onload="setLineHeight()">
+        <h1>Пространство между строками</h1>
+        <div>
+            <p id="text">Текст<br>текст</p>
+        </div>
+        <select name="menu" id="height" onchange="setLineHeight()">
+            <option value="100%">100%</option>
+            <option value="1px">1px</option>
+            <option value="1em">1em</option>
+            <option value="10px">10px</option>
+            <option value="30px">30px</option>
+        </select>
+    </body>
+    <script>
+        function setLineHeight(){
+            let height = document.getElementById("height").value;
+            let text = document.getElementById("text");
+
+            text.style.lineHeight = height;
+        }
+    </script>
+</html>
