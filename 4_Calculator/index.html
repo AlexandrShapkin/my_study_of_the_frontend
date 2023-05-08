@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="application name" content="">
+    <meta name="author" content="Александр Шапкин">
+    <meta name="description" content="Калькулятор">
+
+    <link rel="stylesheet" href="./styles/light.css" id="theme" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/fantasque-sans-mono" type="text/css"/> 
+
+    <title>Калькулятор</title>
+</head>
+
+<body onload="setListeners()">
+    <div class="wrapper">
+        <div class="container">
+            <div class="header-container">
+                <h1 id="title">Калькулятор</h1>
+                <div class="header-button">
+                    <a href="">
+                        <img src="assets/github-logo.png" alt="GitHub logo" id="github-logo" width="30px" height="30px">
+                    </a>
+                </div>
+            </div>
+            <div class="first-row">
+                <input type="text" name="result" id="result" placeholder="Вывод" readonly />
+                <input type="button" value="C" id="clear-button" />
+            </div>
+            <div class="second-row">
+                <input type="button" value="1" id="one" />
+                <input type="button" value="2" id="two" />
+                <input type="button" value="3" id="three" />
+                <input type="button" value="+" id="plus" />
+            </div>
+            <div class="third-row">
+                <input type="button" value="4" id="four" />
+                <input type="button" value="5" id="five" />
+                <input type="button" value="6" id="six" />
+                <input type="button" value="-" id="minus" />
+            </div>
+            <div class="fourth-row">
+                <input type="button" value="7" id="seven" />
+                <input type="button" value="8" id="eight" />
+                <input type="button" value="9" id="nine" />
+                <input type="button" value="*" id="multiply" />
+            </div>
+            <div class="fifth-row">
+                <input type="button" value="/" id="divide" />
+                <input type="button" value="0" id="zero" />
+                <input type="button" value="." id="point" />
+                <input type="button" value="=" id="calculate" />
+            </div>
+        </div>
+    </div>
+    <script src="scripts/script.js">
+
+    </script>
+</body>
+
+</html>
