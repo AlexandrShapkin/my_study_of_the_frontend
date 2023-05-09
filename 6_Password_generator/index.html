@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="application name" content="Мое изучение frontend">
+    <meta name="author" content="Александр Шапкин">
+    <meta name="description" content="Генератор паролей">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/fantasque-sans-mono" type="text/css"/> 
+
+    <title>Генератор паролей</title>
+</head>
+
+<!-- Попытался использовать БЭМ -->
+<body id="body">
+    <div class="wrapper">
+        <div class="container wrapper__container">
+            <div class="header container__header">
+                <h1 class="topic header__topic">Генератор паролей</h1>
+                <div class="results header__results">
+                    <input type="text" name="result" class="result results__result"
+                    id="result" placeholder="Результат" readonly>
+                    <button class="copy-button results__copy-button" id="copy">
+                        Копировать
+                    </button>
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="length-container inputs__length-container">
+                    <label>Длина пароля</label>
+                    <input type="number" min="4"
+                    max="20" value="10" class="password-length" id="passwordLength">
+                </div>
+                <!-- Нет варианта добавления символов криллицы,
+                    потому что она обычно не использучется в паролях -->
+                <div class="settings inputs__settings">
+                    <div class="setting settings__setting">
+                        <label>
+                            Включать строчные буквы
+                        </label>
+                        <input type="checkbox" id="includeLowercase">
+                    </div>
+                    <div class="setting settings__setting">
+                        <label>
+                            Включать прописные буквы
+                        </label>
+                        <input type="checkbox" id="includeUppercase">
+                    </div>
+                    <div class="setting settings__setting">
+                        <label>
+                            Специальные символы
+                        </label>
+                        <input type="checkbox" id="includeSymbols">
+                    </div>
+                    <div class="setting settings__setting">
+                        <label>
+                            Включать числа
+                        </label>
+                        <input type="checkbox" id="includeNumbers">
+                    </div>
+                </div>
+            </div>
+            <div class="footer container__footer">
+                <button class="generate-button" id="generateButton">
+                    Сгенерировать
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="./scripts/script.js"></script>
+</html>
