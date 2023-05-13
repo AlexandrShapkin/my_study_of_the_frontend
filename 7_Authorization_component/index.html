@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application name" content="Мое изучение frontend" />
+    <meta name="author" content="Александр Шапкин" />
+    <meta name="description" content="Компонент авторизации" />
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Компонент авторизации</title>
+  </head>
+  <body id="body">
+    <div class="wrapper">
+      <button class="show-button wrapper__show-button" id="showLogin">
+        Войти
+      </button>
+      <button class="show-button wrapper__show-button" id="showRegistration">
+        Регистрация
+      </button>
+      <button class="show-button wrapper__show-button" id="showRecovery">
+        Восстановить
+      </button>
+      <div class="modal" id="modalLogin">
+        <div class="authorization-substrate modal__authorization-substrate">
+          <!-- login container -->
+          <div
+            class="login-container authorization-substrate__login-container"
+            id="loginContainer"
+          >
+            <div class="header login-container__header">
+              <h1 class="header__title">Вход</h1>
+            </div>
+            <hr class="spliter login-container__spliter" />
+            <form class="authorization-form login-container__authorization-form">
+              <input
+                class="email-input authorization-form__email-input"
+                name="email"
+                autocomplete="email"
+                type="email"
+                placeholder="Email адрес"
+              />
+              <input
+                class="password-input authorization-form__password-input"
+                name="password"
+                autocomplete="current-password"
+                type="password"
+                placeholder="Пароль"
+              />
+                <p class="hlink" id="swapLoginToRecovery">
+                  Забыли пароль?
+                </p>
+              <button class="submit-button authorization-form__submit-button" type="submit">
+                Войти
+              </button>
+            </form>
+            <hr class="spliter login-container__spliter" />
+            <div class="accaunt-variance">
+              Нет аккаунта?
+              <p class="hlink accaunt-variance__hlink" id="swapLoginToRegistration">Зарегистрироваться</p>
+            </div>
+          </div>
+          <!-- registration container -->
+          <div class="registration-container authorization-substrate__registration-container"
+          id="registrationContainer">
+            <div class="header registration-container__header">
+              <h1 class="header__title">Регистрация</h1>
+            </div>
+            <hr class="spliter registration-container__spliter">
+            <form class="authorization-form registration-container__authorization-form">
+              <input
+                class="email-input authorization-form__email-input"
+                name="email"
+                type="email"
+                placeholder="Email адрес"
+              />
+              <input
+                class="password-input authorization-form__password-input"
+                name="password"
+                type="password"
+                placeholder="Пароль"
+              />
+              <input
+              class="password-input authorization-form__password-input"
+              name="password"
+              type="password"
+              placeholder="Пароль"
+              />
+              <button class="submit-button authorization-form__submit-button" type="submit">
+                Зарегистрироваться
+              </button>
+            </form>
+            <hr class="spliter registration-container__spliter">
+            <div class="accaunt-variance">
+              Уже есть аккаунт?
+              <p class="hlink accaunt-variance__hlink" id="swapRegistrationToLogin">Войти</p>
+            </div>
+          </div>
+          <!-- recovery container -->
+          <div class="recovery-container authorization-substrate__recovery-container"
+          id="recoveryContainer">
+            <div class="header registration-container__header">
+              <h1 class="header__title">Восстановление</h1>
+            </div>
+            <hr class="spliter recovery-container__spliter">
+            <form class="authorization-form recovery-container__authorization-form">
+              <input
+                class="email-input authorization-form__email-input"
+                name="email"
+                type="email"
+                placeholder="Email адрес"
+              />
+              <button class="submit-button authorization-form__submit-button" type="submit">
+                Восстановить
+              </button>
+            </form>
+            <hr class="spliter recovery-container__spliter">
+            <div class="accaunt-variance">
+              Вспомнили пароль?
+              <p class="hlink accaunt-variance__hlink" id="swapRecoveryToLogin">Войти</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./scripts/script.js"></script>
+</html>

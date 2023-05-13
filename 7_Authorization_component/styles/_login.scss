@@ -1,0 +1,22 @@
+@use './appearance';
+@forward './appearance';
+
+.login-container {
+    width: 350px;
+    height: 350px;
+    &__header {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    &__authorization-form {
+        margin: auto;
+    }
+
+    &__spliter {
+        width: 80%;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+
