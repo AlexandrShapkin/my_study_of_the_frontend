@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  width: 320px;
+  height: 100vh;
+  background-color: #282828;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.profile {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.items {
+  width: 80%;
+  max-width: 80%;
+}
+
+hr {
+  margin: 10px 0;
+  background-color: #928374;
+  width: 80%;
+}

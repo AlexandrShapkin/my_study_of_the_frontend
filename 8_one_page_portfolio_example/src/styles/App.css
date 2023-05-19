@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: block;
+}
+
+.app__general {
+    position: fixed;
+    left: 0;
+    z-index: 1;
+}
+
+.main {
+    left: 0;
+    margin-left: 320px;
+    width: calc(100% - 320px);
+}
+
+.nav {
+    position: fixed;
+}

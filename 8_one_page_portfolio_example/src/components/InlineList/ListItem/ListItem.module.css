@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 2px 3px;
+  background-color: #ebdbb2;
+  border: 2px solid #bdae93;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.item,
+.item:link,
+.item:visited,
+.item:hover,
+.item:active {
+  color: #3c3836;
+}
+
+.linkIcon {
+  width: 14px;
+  height: 14px;
+  margin: 2px;
+}

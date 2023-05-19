@@ -1,0 +1,16 @@
+.items {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.item {
+  margin-right: 6px;
+  margin-top: 5px;
+}
+
+.title {
+  color: #ebdbb2
+}
